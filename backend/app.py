@@ -4,6 +4,7 @@ import joblib
 import numpy as np
 import os
 import pandas as pd
+from flask import send_from_directory
 
 from utils.preprocess import prepare_input
 from utils.recommendations import (
@@ -12,18 +13,12 @@ from utils.recommendations import (
     generate_recommendations
 )
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder="../frontend", static_url_path="")
 CORS(app)
 
 # -------------------------------
 # CORS
 # -------------------------------
-@app.after_request
-def after_request(response):
-    response.headers.add('Access-Control-Allow-Origin', '*')
-    response.headers.add('Access-Control-Allow-Headers', 'Content-Type')
-    response.headers.add('Access-Control-Allow-Methods', 'GET,POST')
-    return response
 
 
 # -------------------------------
@@ -60,11 +55,25 @@ def validate_input(data, required_fields):
 # -------------------------------
 # ROUTES
 # -------------------------------
+
+
+app = Flask(__name__, static_folder="../frontend", static_url_path="")
+CORS(app)
+
 @app.route("/")
 def home():
-    return jsonify({"message": "CardioGluco Risk Predictor API Running"})
+    return send_from_directory("../frontend", "index.html")
+@app.route("/heart")
+def heart_page():
+    return send_from_directory("../frontend", "heart.html")
 
+@app.route("/diabetes")
+def diabetes_page():
+    return send_from_directory("../frontend", "diabetes.html")
 
+@app.route("/learn")
+def learn_page():
+    return send_from_directory("../frontend", "learn.html")
 # -------------------------------
 # HEART
 # -------------------------------
