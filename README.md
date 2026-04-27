@@ -108,83 +108,6 @@ cardiogluco-risk-predictor/
 
 ---
 
-▶️ Run Locally
-
-1️⃣ Clone Repository
-
-git clone https://github.com/your-username/cardiogluco-risk-predictor.git
-cd cardiogluco-risk-predictor
-
-2️⃣ Install Dependencies
-
-pip install -r backend/requirements.txt
-
-3️⃣ Start Backend Server
-
-python backend/app.py
-
-4️⃣ Open in Browser
-
-http://127.0.0.1:5000/
-
----
-
-🌐 Deployment Guide
-
-✅ Recommended: Render (Full Stack)
-
-1. Push project to GitHub
-2. Go to https://render.com
-3. Create New Web Service
-4. Connect GitHub repo
-
-🔧 Build Command
-
-pip install -r backend/requirements.txt
-
-▶️ Start Command
-
-python backend/app.py
-
----
-
-⚠️ Important Changes Before Deployment
-
-Replace this:
-
-fetch("http://127.0.0.1:5000/predict/heart")
-
-With:
-
-fetch("/predict/heart")
-
-(Same for diabetes API)
-
----
-
-🚫 GitHub Pages Limitation
-
-- Only supports frontend
-- Backend (Flask) will NOT work
-
----
-
-📸 Screenshots
-
-🖥️ Dashboard
-
-(Add screenshot here)
-
-📊 Risk Visualization
-
-(Add screenshot here)
-
-🧠 Insights & Recommendations
-
-(Add screenshot here)
-
----
-
 💡 Future Enhancements
 
 - 🔐 User authentication system
@@ -199,14 +122,6 @@ fetch("/predict/heart")
 
 Contributions are welcome!
 
-Steps:
-
-1. Fork the repository
-2. Create new branch
-3. Make changes
-4. Submit Pull Request
-
----
 
 📄 License
 
