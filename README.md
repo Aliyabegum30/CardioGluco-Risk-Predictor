@@ -4,13 +4,6 @@ A full-stack Machine Learning web application that predicts the risk of Heart Di
 
 ---
 
-🚀 Live Demo
-
-🔗 (Add your deployed link here after Render deployment)
-Example: https://cardiogluco.onrender.com
-
----
-
 📌 Features
 
 🔍 Prediction System
